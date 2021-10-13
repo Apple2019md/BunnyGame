@@ -95,9 +95,9 @@ function setup()
   bunny.changeAnimation("blinking", blink);
   bunny.scale = 0.2;
 
-  rope = new Rope(16,{x:40,y:30});
-  rope2 = new Rope(11,{x:canW-100,y:40});
-  rope3 = new Rope(9,{x:canW-100,y:200});
+  rope = new Rope(8,{x:40,y:30});
+  rope2 = new Rope(7,{x:390,y:40});
+  rope3 = new Rope(4,{x:400,y:200});
 
   
   fruit = Bodies.circle(300,300,20);
@@ -115,13 +115,13 @@ function setup()
 
   //Button 2
   button2 = createImg('assets/cut_btn (1).png');
-  button2.position(canW-120, 40);
+  button2.position(370, 40);
   button2.size(50,50);
   button2.mouseClicked(drop2);
   
   //Button 3
   button3 = createImg('assets/cut_btn (1).png');
-  button3.position(canW-120, 200);
+  button3.position(370, 200);
   button3.size(50,50);
   button3.mouseClicked(drop3);
   
@@ -166,7 +166,7 @@ function draw()
     EaT.play();
     EaT.setVolume(1.5);
   }
-  if(fruit != null && fruit.position.y>=650) {
+  if(fruit != null && fruit.position.y>=canH-80) {
     bunny.changeAnimation("sadding", sad);
     sadsound.play();
     bgsound.stop();
